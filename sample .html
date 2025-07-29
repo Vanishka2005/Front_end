@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+        #navbar{
+        width: 100vw;
+        height: 10vh;
+        background-color:rgb(252, 239, 247);;
+        display: flex;
+        justify-content: space-around;
+        color: rgb(214, 71, 126);
+    }
+    #left,#right{
+        width: 50%;
+        height:10vh;
+        font-size: small;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    select{
+        height:3vh;
+        border:0;
+        color:rgb(172, 37, 89) 
+    }
+    #navbar1{
+        height: 10vh;
+        background-color:rgb(243, 205, 213);
+        color: rgb(202, 47, 106);
+        display: flex;
+        justify-content: space-around;
+        position: sticky;
+        top:0;
+    }
+    #navbar1left, #navbar1right{
+        width: 50%;
+        height: 10vh;
+        display: flex;
+        justify-content: space-around;
+                        align-items: center;
+    }
+    input{
+border: 0;
+height: 5vh;
+width: 20vw;
+        border-radius:5px;
+        align-items: center;
+    }
+    #navbar2{
+        width: 100vw;
+        height: 10vh;
+background-color:rgb(252, 239, 247); 
+        display: flex;
+        justify-content: space-around;
+                color: rgb(202, 47, 106);
+        }
+        #bg{
+                    width: 100vw;
+                    display: flex;
+                     justify-content: space-around;
+                                     align-items: center;
+        }
+        #nav1{
+            height:15vh;
+            width: 100vw;
+background-color:rgb(252, 239, 247);
+        }
+        #navbar3{
+            height: 30vh;
+            width: 100vw;
+background-color:rgb(252, 239, 247);
+            display:flex;
+            justify-content: space-around;
+            padding: 3px;
+                    color: rgb(214, 71, 126);
+           }
+         .items{
+             width: 10vw;
+            height: 20vh;
+            background-color:white;
+              display: grid;
+        grid-template-columns: 25px;
+        border-radius: 15px;
+        margin-left: 10px;
+        margin-top: 10px;
+                color: rgb(202, 47, 106);
+        }
+         .items:hover{
+            transform: scale(150%);
+        } 
+        .gr{
+            text-align: center;
+            display: grid;
+            } 
+            img{
+                padding: 5px;
+           margin: 5px;
+           border-radius: 25px;          
+            }
+            #navbar4{
+                height: 5vh;
+                width: 100vw;
+                background-color:rgb(252, 239, 247);
+                display: flex;
+                justify-content: space-around;
+                padding:5px;
+            }
+            #navbar4left{
+                width: 50%;
+                height: 5vh;
+                    display: flex;
+                    justify-content: space-around;
+                                    align-items: center;
+            }
+             #navbar4right{
+                width: 50%;
+                height: 5vh;
+                    display: flex;
+                    justify-content: space-around;
+                                    align-items: center;
+            }
+            #navbar5{
+                 height: 5vh;
+                width: 100vw;
+                 background-color:rgb(252, 239, 247);
+                display: flex;
+                padding: 5px;
+            }
+            #navbar5left{
+                width: 50%;
+                display: flex;
+                justify-content: space-around;
+            }
+            #navbar5right{
+                width: 50%;
+                display: flex;
+                justify-content: space-around;
+                                align-items: center;
+            }
+            .navbar6{
+                height: 70vh;
+                width: 100vw;
+                background-color:rgb(252, 231, 246);
+                margin: 0;
+                display: flex;
+                border: 5px;
+                padding: 10px;
+            }
+            .grid{
+                height: 70vh;
+                width: 25vw;
+                background-color:white;
+                display: grid;
+                grid-template-columns: 25px;
+                border-radius: 25px;
+                margin-left: 15px;
+            }
+             .img1:hover{
+                width:330px;
+                height:380px;
+                background-image:url(38ac250631_profile.webp);
+                                background-size:cover ;
+                                background-repeat: no-repeat;
+                                border-radius: 25px;
+                                padding: 3px;
+                                margin: 2px;         
+             }    
+             .img1:hover img{
+                visibility: hidden;
+             }
+             .img2:hover{
+                 width:330px;
+                height:380px;
+                background-image:url(4aa676433_profile.webp);
+                                background-size:cover ;
+                                background-repeat: no-repeat;
+                                border-radius: 25px;
+                                padding: 3px;
+                                margin: 2px;
+             }   .img2:hover img{
+                visibility: hidden;
+             }
+               .img3:hover{
+                 width:330px;
+                height:380px;
+                background-image:url(brace.webp);
+                                background-size:cover ;
+                                background-repeat: no-repeat;
+                                border-radius: 25px;
+                                padding: 3px;
+                                margin: 2px;
+             }   .img3:hover img{
+                visibility: hidden;
+             }  .img4:hover{
+                 width:330px;
+                height:380px;
+                background-image:url(chain.webp);
+                                background-size:cover ;
+                                background-repeat: no-repeat;
+                                border-radius: 25px;
+                                padding: 3px;
+                                margin: 2px;
+             }   .img4:hover img{
+                visibility: hidden;
+             } .img5:hover{
+                 width:330px;
+                height:380px;
+                background-image:url(ring\ pic.webp);
+                                background-size:cover ;
+                                background-repeat: no-repeat;
+                                border-radius: 25px;
+                                padding: 3px;
+                                margin: 2px;
+             }   .img5:hover img{
+                visibility: hidden;
+             }
+              .img6:hover{
+                 width:330px;
+                height:380px;
+                background-image:url(diamond\ neck.jpg);
+                                background-size:cover ;
+                                background-repeat: no-repeat;
+                                border-radius: 25px;
+                                padding: 3px;
+                                margin: 2px;
+             }   .img6:hover img{
+                visibility: hidden;
+             }
+              .img7:hover{
+                 width:330px;
+                height:380px;
+                background-image:url(diamond\ stud.png);
+                                background-size:cover ;
+                                background-repeat: no-repeat;
+                                border-radius: 25px;
+                                padding: 3px;
+                                margin: 2px;
+
+             }   .img7:hover img{
+                visibility: hidden;
+             } .img8:hover{
+                 width:330px;
+                height:380px;
+                background-image:url(dimond\ brace.webp);
+                                background-size:cover ;
+                                background-repeat: no-repeat;
+                                border-radius: 25px;
+                                padding: 3px;
+                                margin: 2px;
+
+             }   .img8:hover img{
+                visibility: hidden;
+             }
+             .img9:hover{
+                 width:330px;
+                height:380px;
+                background-image:url(silver\ pen\ profile.jpg);
+                                background-size:cover ;
+                                background-repeat: no-repeat;
+                                border-radius: 25px;
+                                padding: 3px;
+                                margin: 2px;
+
+             }   .img9:hover img{
+                visibility: hidden;
+             }
+             .img10:hover{
+                 width:330px;
+                height:380px;
+                background-image:url(silver\ stud\ model.jpg);
+                                background-size:cover ;
+                                background-repeat: no-repeat;
+                                border-radius: 25px;
+                                padding: 3px;
+                                margin: 2px;
+             }   .img10:hover img{
+                visibility: hidden;
+             }
+             .img11:hover{
+                 width:330px;
+                height:380px;
+                background-image:url(silver\ chain\ profile.jpg);
+                                background-size:cover ;
+                                background-repeat: no-repeat;
+                                border-radius: 25px;
+                                padding: 3px;
+                                margin: 2px;
+
+             }   .img11:hover img{
+                visibility: hidden;
+             }
+             .img12:hover{
+                 width:330px;
+                height:380px;
+                background-image:url(ang.jpg);
+                                background-size:cover ;
+                                background-repeat: no-repeat;
+                                border-radius: 25px;
+                                padding: 3px;
+                                margin: 2px;
+             }   .img12:hover img{
+                visibility: hidden;
+             }
+             .navbar7{
+                height: 10vh;
+                width:100vw;
+                background-color:rgb(253, 216, 238);
+             }
+</style>
+      <body>
+    <div id="navbar">
+        <div id="left">
+       <div><h1 style="color:rgb(30, 218, 155);padding:bottom;padding: top;">ORIANA</h1>
+       <h4 style="font-style:italic;color: rgb(8, 77, 67);">Light Weight Jewellery</h4>
+        </div>
+      <div> 
+     <h1 style="color:rgb(163, 37, 86);" >BRIDES</h>
+        <h4 style="font-style:italic;align-items: center;">The Bridal Collections</h4>
+      </div>    
+        <h2 style="color:rgb(163, 37, 86) ;">GRTverse</h2>
+        </div>
+        <div id="right">
+         <select>
+                <option>GOLD 22KT/1g-Rs.9105</option>
+                <option>GOLD 24KT/1g-Rs.9940</option>
+                <option>GOLD 18KT/1g-Rs.7455</option>
+                <option>GOLD 14KT/1g-Rs.5798</option>
+                <option>PLATINUM 1g-Rs.4859</option>
+                <option>SILVER 1g-Rs.124</option>
+            </select>
+            <h3 style="color:rgb(163, 37, 86) ">Store Locator</h3>
+            <h3 style="color:rgb(163, 37, 86) ">INR</h3>
+            <h3 style="color:rgb(163, 37, 86) ">Need help?</h3>
+        </div>
+    </div>
+        <div id="navbar1">
+           <div id="navbar1left">
+             <div>
+           <h3 style="padding-top: 10px;color:rgb(163, 37, 86);">GRT Jewellers</h3>
+           <h4 style="font-style:italic;">Since 1994</h4></div>
+           <h3>QUICK DELIVERY</h3>
+           <select>
+            <option>VIRTUAL SHOPPING</option>
+            <option>GRT Live</option>
+            <option>Instant video shopping</option>
+           </select>
+           </div>
+           <div id="navbar1right">
+         <input placeholder="Search for Jewellery"/>
+         <h4>LOG IN </h4>
+         <h4>Wishlist</h4>
+         <h4>My cart</4>
+        </div>
+        </div>
+        <div id="navbar2">
+            <div id="bg">
+               <h4>All Jewellery</h4>
+               <h4>Gold</h4> 
+               <h4>Diamond</h4>
+               <h4>Silver</h4>
+               <h4>Platinum</h4>
+               <h4>Gift Store</h4>
+               <h4>Collections</h4>
+               <h4>offers</h4>
+               <h4>Solitaire</h4>
+               <button style=" height:5vh;border:10px;  background-color:rgb(214, 71, 126); color: white;" >Jewellery Purchase Plan</button>
+            </div>
+        </div>
+        <div id="nav1">
+                    <div id="title"><h1 style="display:flex;justify-content: space-around;color: rgb(202, 47, 106);padding: 25PX;">All Jewellery</h1></div>
+        </div> 
+        <div id="navbar3">
+      <div class="items">
+     <div class="gr">
+        <img src="gold-earrings_1.webp" width="120" height="100"/><h4>Earings</h4>
+        <map name="a1">
+            <area shape="circle" coords="30 30 30" href="https://www.amazon.com"/>
+        </map>
+    </div>
+     </div>
+     <div class="items">
+      <div class="gr">
+        <img usemap="#a1" src="gold-bangles_1.webp" width="120" height="100"/>
+        <h4>Bangles</h4></div>
+    </div>
+         <div class="items">
+    <div class="gr"><img src="gold-chains_1.webp" width="120" height="100"/><h4>Chains</h4></div>
+         </div>
+         <div class="items"> 
+     <div class="gr"><img src="gold-necklaces_1_1.webp" width="120" height="100"/><h4>Necklace</h4></div>
+       </div>
+         <div class="items">
+      <div class="gr"><img src="gold-nosepin_2.webp" width="120" height="100"/><h4>Nosepin</h4></div>
+     </div>
+          <div class="items">
+    <div class="gr"><img src="gold-pendants_1.webp"width="120" height="100"><h4>Pendants</h4></div>
+          </div>
+               <div class="items">
+    <div class="gr"><img src="gold-rings_1.webp" width="120" height="100"/><h4>Rings</h4></div>
+               </div></div>
+               <div id="navbar4">
+                <div id="navbar4left">
+                    <button style=" width: 10vw;height: 5vh;border:0; border-radius: 10px; background-color: rgb(245, 187, 218);color: rgb(122, 29, 65);"><strong>Filter</strong></button>
+                    <strong style="color:rgb(122, 29, 65) ;">101 ITEMS</strong>
+                </div>
+                <div id="navbar4right">
+                    <button style=" width: 10vw;height: 5vh;border:0; border-radius: 10px; border-radius: 10px; background-color: rgb(245, 187, 218);color: rgb(122, 29, 65);"><strong> Sort:New Drop</strong></button>
+                </div>
+               </div>
+               <div id="navbar5">
+                <div id="navbar5left">
+                    
+                </div>
+<div id="navbar5right">
+    <button style= "width: 10vw; height: 5vh; border-radius: 5px;border: 0; background-color: rgb(197, 224, 250);color: rgb(58, 58, 161);"><strong> NEW DROP</strong></button>
+    <button style=" width: 10vw;height: 5vh; border-radius: 5px; border:0; background-color:rgb(233, 184, 233); color: rgb(145, 33, 145);"><strong>BESTSELLER</strong></button>
+    <button style=" width: 10vw;height: 5vh; border-radius: 5px;border:0;background-color:wheat; color: rgb(126, 85, 10);"><strong>QUICK DELIVERY</strong></button>
+</div>
+      </div>
+      <div class="navbar6">
+        <div class="grid">
+        <div class="img1">
+       <img src="38ac250659_prop.jpg" width="300" height="360"  /></span><p style="margin-left:20px; margin: 5px;"></p><strong>Rs.34,547</strong><span style="text-decoration: line-through;">Rs.35,662</span> 3%offer</div>
+        </div>              
+       <div class="grid">
+        <div class="img2">
+            <img src="4aa676433_prop.jpg"width="300" height="360"  /><p style="margin-left:20px; margin: 5px;"></p><strong>Rs.31,686</strong><span style="text-decoration: line-through;">Rs.32,712</span> 3%offer</div>
+            </div>
+             <div class="grid">
+        <div class="img3">
+            <img src="bracelet.jpg"width="300" height="360"  /><p style="margin-left:20px; margin: 5px;"></p><strong>Rs.75,972</strong><span style="text-decoration: line-through;">Rs.78,431</span> 3%offer</div>
+            </div>
+ <div class="grid">
+        <div class="img4">
+            <img src="chains.jpg"width="300" height="360"  /><p style="margin-left:20px; margin: 5px;"></p><strong>Rs.23.520</strong><span style="text-decoration: line-through;">Rs.24,438</span> 4%offer</div>
+            </div>
+            </div>
+             <div class="navbar6">
+        <div class="grid">
+        <div class="img5">
+       <img src="ring di.jpg" width="300" height="360"  /></span><p style="margin-left:20px; margin: 5px;"></p><strong>Rs.34,820</strong><span style="text-decoration: line-through;">Rs.36,165</span> 4%offer</div>
+        </div>              
+        <div class="grid">
+        <div class="img6">
+            <img src="neck.jpg"width="300" height="360"  /><p style="margin-left:20px; margin: 5px;"></p><strong>Rs.1,86,888</strong><span style="text-decoration: line-through;">Rs.1,97,954</span> 4%offer</p></div>
+            </div>
+             <div class="grid">
+        <div class="img7">
+            <img src="drop di.png"width="300" height="360"  /><p style="margin-left:20px; margin: 5px;"></p><strong>Rs.1,83,000</strong><span style="text-decoration: line-through;">Rs.1,95.007</span> 6%offer</div>
+            </div>
+ <div class="grid">
+        <div class="img8">
+            <img src="diamond brce.jpg"width="300" height="360" /><p style="margin-left:20px; margin: 5px;"></p><strong>Rs.1,13,000</strong><span style="text-decoration: line-through;">Rs.1,17.167</span> 4%offer</div>
+            </div>
+            </div>
+                   <div class="navbar6">
+        <div class="grid">
+        <div class="img9">
+       <img src="pen silver.jpg" width="300" height="360"  /></span><p style="margin-left:20px; margin: 5px;"></p><strong>Rs.9,810</strong><span style="text-decoration: line-through;">Rs.10,800</span> 4%offer</div>
+        </div>              
+        <div class="grid">
+        <div class="img10">
+            <img src="silver stud.jpg" width="300" height="360"  /><p style="margin-left:20px; margin: 5px;"></p><strong>Rs.2,500</strong><span style="text-decoration: line-through;">Rs.3,500</span> 4%offer</div>
+            </div>                                                                                                                                      
+             <div class="grid">
+        <div class="img11">
+            <img src="silver chain.jpg" width="300" height="360"  /><p style="margin-left:20px; margin: 5px;"></p><strong>Rs.3,500</strong><span style="text-decoration: line-through;">Rs.5,000</span> 4%offer</div>
+            </div>
+ <div class="grid">
+        <div class="img12">
+            <img  src="anglet.jpg" width="300" height="360"  />
+        <p style="margin-left:20px; margin: 5px;"></p><strong>Rs.3,137</strong><span style="text-decoration: line-through;">Rs.5,000</span> 4%offer</p></div>
+        </div>
+            </div>
+            <div class="navbar7">
+                     <div>  <marquee><h1 style="font-style: italic; color:rgb(122, 29, 65) ;">Thank your for Visiting GRT Jewellers</h1></marquee>
+        </div>
+        </div>
+    </div>
+            </div>
+</body>
+</html>

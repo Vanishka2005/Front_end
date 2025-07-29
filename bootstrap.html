@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #navbar{
+        height: 8vh;
+        width: 100vw;
+        background-color: blueviolet;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: fixed;
+        top:0;
+    }
+    
+     #left{
+        height: 100%;
+        width: 30%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      
+    }
+        #right{
+        height: 100%;
+        width: 30%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    #main{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        background-color: blanchedalmond;
+    }
+    #leftmain{
+        height: 100%;
+        width: 20%;
+        background-color: aqua;
+    }
+   #centremain{
+        height: 100%;
+        width: 60%;
+        background-color:purple;
+   }
+     #rightmain{
+        height: 100%;
+        width: 20%;
+        background-color:brown;
+     }
+</style>
+<body>
+    <div id="navbar">
+          <div id ="left">
+            <p>Docs</p>
+            <p>Example</p>
+            <p>Icons</p>
+            <p>Themes</p>
+            <p>Blog</p>
+
+    </div>
+ <input id=search type="search" placeholder="search">
+    <div id ="right">
+            <p>Docs</p>
+            <p>Example</p>
+            <p>Icons</p>
+            <p>Themes</p>
+            <p>Blog</p>
+    </div>
+         </div>
+
+        <div id="main">
+            <div id="leftmain">
+
+            </div>
+            <div id="centremain">
+
+            </div>
+            <div id="rigthmain">
+
+            </div>
+        </div>
+</body>
+</html>

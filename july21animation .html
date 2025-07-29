@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #d1{
+        height: 10vh;
+        width: 50vw;
+        background-color: aqua;
+        box-shadow: 5px 5px 25px 5px purple; /*3px blur the color,4px spread increase the color,1px shadow va move pannradhuku(left to rigth),2px shadow can move (top to bottom) 25px 25px 35px 25px more are less buttons ku use agum*/
+    }
+    button{
+        border-radius: 10px;
+        width: 100px;
+        color:black;
+        transition:3s all;  /* transition use panna 3 second late ah varum*/
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        font-weight: 800;
+        padding:8px;
+        background-color:pink;
+        cursor: pointer;  /*arrow symbol change to hand symbol*/
+    }
+    button:hover{
+        box-shadow: 5px 5px 5xpx 5px rgb(255, 0, 0);
+    }
+    table,tr,th,td{
+        border:1px solid black ; /* table form*/ 
+        border-collapse:collapse ; /* run single border box border collpase illama run panna double boder box la run agum*/
+    }
+    li{
+        list-style:symbols(); /*the list style editing a  romans numbers alapbets etc*/
+    }
+    p{
+        /*white-space: nowrap; p tag come in single line cannot use in really time*/
+      word-break: break-all;  /* word break:break -all; it cover all the space*/ /* these 2 are individual uses in <P> */
+    }
+    #d2{
+        height: 10vh;
+        width: 10vw;
+        background-color: blanchedalmond;
+        animation-name: example1; /* they are 3 important properties to creating an animation: animation-name & animation_duration & animation time*/
+        animation-duration: 10s;/*seconds can be increase or decrease also*/
+        /*animation-delay: 3s;*//* page reload panna 3 second after tha animation run agum*/
+        animation-iteration-count: infinite; /*animation color cannot be stop*/
+    }
+    @keyframes example1 {/* animation desging panna keyframes use pannanum */
+        0%{
+          background-color: blue;  
+          opacity: 0; /*for capcity increase or decrease*/
+        }
+        20%{
+            background-color: aqua;
+            transform:rotate(40deg) ;/* for rotate*/
+        }
+        50%{
+            transform: translateY(200px);/* for move top to bottom*/ 
+            background-color: darkmagenta;
+        }
+        80%{
+            background-color: darkorange;
+            transform: skew(50deg);/*3D effect*/
+        }
+        100%{
+            transform: translateX(200px);/* for move right side*/
+            background-color: crimson;
+        }
+    }
+</style>
+<body>
+    <div id="d1">
+    </div>
+    <button>submit</button>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>DOB</th>
+        </tr>
+        <tr>
+            <td>vanishka</td>
+            <td>20</td>
+            <td>31/7/05</td>
+        </tr>
+        <tr>
+            <td>kamali</td>
+            <td>20</td>
+            <td>11/5/05</td>
+        </tr>
+        <tr>
+            <td>sharmi</td>
+            <td>20</td>
+            <td>20/5/05</td>
+        </tr>
+    </table>
+    <ul>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+        <li>home</li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore minus asperiores blanditiis nemo atque, sunt exercitationem porro, earum esse rerum molestias consequatur doloremque corporis mollitia dicta! Iure similique aspernatur voluptas?</p>
+    <div id="d2">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #navmobile{
+        height: 10vh;
+        width: 100vw;
+        background-color: rgb(144, 144, 243);
+        color:white;
+        display: flex;
+        display: none;
+    justify-content: space-between;
+    align-items: center;
+    }
+@media screen and (max-width: 500px) {
+        #navmobile{
+            display: flex;
+            justify-content: space-between;  
+    }
+    #navbar{
+        display: none!important;
+        opacity: 0;
+    }
+}
+     #navbar{
+        width: 100vw;
+        height:9vh;
+        background-color:blueviolet;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: sticky;
+        top:0;
+    }
+    #left{
+        width:35%;
+          display: flex; 
+                justify-content: space-around;
+                font-size:large;
+                align-items: center;
+    }
+    #right{
+        width:35%;
+        display: flex;
+        justify-content: space-around;
+        font-size:large;
+        align-items: center;
+    }
+     #navbar1{
+        width: 100vw;
+        height: 220vh;
+        display: flex;
+        justify-content: space-around;
+    }
+    #navbar1left{
+        width: 20%;
+        height: 100%;
+        background-color:blanchedalmond;
+          position:fixed;
+        left:0;
+        top:10%;
+        padding: 10px;
+    }
+    #navbar1center{
+        width: 58%;
+        height: 100%;
+        background-color:white;
+    }
+    #navbar1right{
+        width: 20%;
+        height: 100%;
+        background-color:blanchedalmond;
+         position:fixed;
+        right:0;
+        top: 10%;
+        padding: 1px;
+        }
+</style>
+
+<body>
+    <div id="navmobile">
+        <p>Home</p>
+        <p><h1>Bootstrap</h1></p>
+        <input placeholder="Search" style="border-radius: 5px; padding: 5px;"/>
+    </div>
+      <div id="navbar">
+<div id="left">
+    <button>B</button>
+    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;" >Docs</p>
+    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Examples</p>
+    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Icons</p>
+    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Themes</p>
+    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Blog</p>
+</div>
+   <input type="text" placeholder="Search" style="width: 20%;"/>
+    <div id="right">
+    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Docs</p>
+    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Examples</p>
+    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Icons</p>
+    <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Themes</p>
+    </div>
+    </div>
+    <div id="navbar1">
+        <div id="navbar1left">
+        <p><h1>Getting started</h1></p>
+        <p>Introduction</p>
+        <p>Download</p>
+        <p>Contents</p>
+        <p>Browsers & devices</p>
+        <p>JavaScript</p>
+        <p>Webpack</p>
+        <p>Parcel</p>
+        <p>Vite</p>
+        <p>Accessibility</p>
+        <p>RFS</p>
+        <p>RTL</p>
+        <p>Contribute</p>
+        <p><h1>Customize</h1></p>
+        <p>Overview</p>
+        <p>Sass</p>
+        <p>Options</p>
+        <p>Color</p>
+        <p>Color modes</p>
+        <p>Components</p>
+        <p>CSS variables</p>
+        <p>Optimize</p>
+         <p>Download</p>
+        <p>Contents</p>
+        <p>Browsers & devices</p>
+        <p>JavaScript</p>
+        <p>Webpack</p>
+        <p>Parcel</p>
+        <p>Vite</p>
+        <p>Accessibility</p>
+        <p>RFS</p>
+        <p>RTL</p>
+        <p>Contribute</p>
+        <p><h1>Customize</h1></p>
+        <p>Overview</p>
+         <p>JavaScript</p>
+        <p>Webpack</p>
+        <p>Parcel</p>
+        <p>Vite</p>
+        </div>
+ <div id="navbar1center">
+    <p><h1>Get started with Bootstrap</h1></p>
+    <p>Bootstrap is a powerful, feature-packed frontend toolkit. Build anything—from prototype to production—in minutes.</p>
+    <p><h1>Quick start</h1></p>
+    <p>Get started by including Bootstrap’s production-ready CSS and JavaScript via CDN without the need for any build steps. See it in practice with this Bootstrap CodePen demo.</p>
+    <p>1.Create a new index.html file in your project root. Include the <meta name="viewport"> tag as well for proper responsive behavior in mobile devices.</p>
+    <p>2.Include Bootstrap’s CSS and JS. Place the <link> tag in the <head> for our CSS, and the tag for our JavaScript bundle (including Popper for positioning dropdowns, popovers, and tooltips) before the closing .Learn more about our CDN links.</p>
+    <p>3.Hello, world! Open the page in your browser of choice to see your Bootstrapped page. Now you can start building with Bootstrap by creating your own layout, adding dozens of components, and utilizing our official examples.</p>
+    <p><h1>CDN links</h1></p>
+    <p>When using CDN links, be sure to use the integrity attribute to verify the correct files and versions. These hashes are unique to each file and version of Bootstrap, so when you update to a new version, be sure the integrity attribute is also updated.</p>
+    <p><h1>Next steps</h1> </p>
+    <p>1.Read a bit more about some important global environment settings that Bootstrap utilizes</p>
+    <p>2.Read about what’s included in Bootstrap in our contents section and the list of components that require JavaScript below.</p>
+    <p>3.Need a little more power? Consider building with Bootstrap by including the source files via package manager.</p>
+    <p>4.Looking to use Bootstrap as a module with  Please refer to our using Bootstrap as a module section</p>
+    <p><h1>JS components</h1></p>
+    <p>Curious which components explicitly require our JavaScript and Popper? If you’re at all unsure about the general page structure, keep reading for an example page template.</p>
+    <p>1.Accordions for extending our Collapse plugin</p>
+    <p>2.Alerts for dismissing</p>
+    <p>3.Buttons for toggling states and checkbox/radio functionality</p>
+    <p>Curious which components explicitly require our JavaScript and Popper? If you’re at all unsure about the general page structure, keep reading for an example page template.</p>
+    <p>1.Accordions for extending our Collapse plugin</p>
+    <p>2.Alerts for dismissing</p>
+    <p>3.Buttons for toggling states and checkbox/radio functionality</p>
+    <p>Curious which components explicitly require our JavaScript and Popper? If you’re at all unsure about the general page structure, keep reading for an example page template.</p>
+    <p>1.Accordions for extending our Collapse plugin</p>
+    <p>2.Alerts for dismissing</p>
+    <p>3.Buttons for toggling states and checkbox/radio functionality</p>
+    <p>Curious which components explicitly require our JavaScript and Popper? If you’re at all unsure about the general page structure, keep reading for an example page template.</p>
+    <p>1.Accordions for extending our Collapse plugin</p>
+    <p>2.Alerts for dismissing</p>
+    <p>3.Buttons for toggling states and checkbox/radio functionality</p>
+    <p>2.Alerts for dismissing</p>
+    <p>3.Buttons for toggling states and checkbox/radio functionality</p>
+</div>
+<div id="navbar1right">
+    <p><h1>On this page</h1></p>
+        <p>Quick start</p>
+        <p>CDN links</p>
+        <p>Next steps</p>
+        <p>Js components</p>
+        <p>important globals</p>
+        <p>HTML5 doctype</p>
+        <p>Viewport meta</p>
+        <p>Box-sizing</p>
+        <p>Reboot</p>
+        <p>community</p>
+        <p>Quick start</p>
+        <p>CDN links</p>
+        <p>Next steps</p>
+        <p>Js components</p>
+        <p>important globals</p>
+        <p>HTML5 doctype</p>
+        <p>Viewport meta</p>
+        <p>Box-sizing</p>
+        <p>Reboot</p>
+        <p>community</p>
+        <p>community</p>
+        <p>Quick start</p>
+        <p>CDN links</p>
+        <p>Next steps</p>
+        <p>Js components</p>
+        <p>important globals</p>
+        <p>HTML5 doctype</p>
+        <p>Viewport meta</p>
+        <p>Box-sizing</p>
+        <p>Reboot</p>
+        <p>community</p>
+        <p>important globals</p>
+        <p>HTML5 doctype</p>
+        <p>Viewport meta</p>
+        <p>Box-sizing</p>
+        <p>Reboot</p>
+        <p>community</p>
+        <p>important globals</p>
+        <p>HTML5 doctype</p>
+        <p>Viewport meta</p>
+</div>
+</body>
+</html>

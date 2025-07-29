@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Flipkart Clone</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <style>
+   * {
+      margin: 0;
+      padding: 0;
+      /*box-sizing: border-box;
+      font-family: Arial, sans-serif;*/
+    }
+    .navbar{
+      background-color: #2874f0;
+    }
+    .navbar-brand{
+      font-weight: bold;
+      color: white;
+      font-size: 22px;
+      margin-right: 8px;
+    }
+    .navbar-brand small{
+      font-size: 12px;
+      color:#f0f0f0;
+      display: block;
+      margin-top: -5px;
+    }
+    .search-box{
+      width: 650;
+      display: flex;
+      align-items: center;
+    }
+    .search-box input{
+      width: 100%;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 2px 0 0 2px;
+      font-size: 14px;
+    }
+    .search-box button{
+      background-color: #fff;
+      color:#2874f0;
+      font-weight: bold;
+      padding: 6px 15px;
+      border:none;
+      border-radius: 0 2px 2px 0;
+      font-size: 14px;
+    }
+    .explore-plus span{
+      font-size: 13px;
+    }
+    .explore-plus img{
+      margin-right: 4px;
+    }
+
+
+    /*body {
+      background-color: #f5f5f5;
+    }*/
+
+    /* Navbar 
+    #navbar {
+      height: 10vh;
+      width: 100vw;
+      background-color:white;/*#3072ff;----
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    
+    }*/
+
+    #logo {
+      font-size: 24px;
+      font-weight: bold;
+     /* color: #ff3f6c;*/
+    }
+    /*dropdown menu
+    .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+    }
+    .dropdown-menu {
+      min-width: 600px;
+      display: none;
+    }
+    .mega-menu {
+      display: flex;
+      padding: 20px;
+    }
+    .mega-menu-column {
+      flex: 1;
+      padding: 0 20px;
+    }
+    .mega-menu-column h6 {
+      font-weight: bold;
+      color: #2874f0;
+    }
+    .mega-menu-column a {
+      text-decoration: none;
+      display: block;
+      margin: 5px 0;
+      color: #333;
+    }
+    .mega-menu-column a:hover {
+      color: #2874f0;
+    }*/
+
+
+
+   /* #menu {
+      display: flex;
+      gap: 20px;
+   }*/
+ 
+   /* #menu a {
+      text-decoration: none;
+      color:gray;
+      font-weight: 500;
+    }*/
+
+   /* #search-box input {
+     width: 400px;
+      padding: 8px;
+      border: none;
+      border-radius: 10px;
+    
+    }*/
+     .menu{
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    #icons{
+      display: flex;
+      gap: 20px;
+    }
+    #icons button {
+      background-color: transparent;
+      border:none;
+      font-size: 16px;
+      cursor: pointer;
+      gap: 70px;
+    }
+    #icons button:hover {
+      color: #2874f0;
+    }
+
+    /* Categories */
+    #categories {
+      padding: 20px;
+      display: flex;
+      justify-content: space-around;
+      background-color: white;
+      flex-wrap: wrap;
+    }
+
+    .category {
+      text-align: center;
+    }
+
+    .category img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+    .carouselExampleSlidesOnly{
+      width: 100%;
+      height: 100px;
+      background-color:white;
+    }
+    
+    /* Products */
+    #products {
+      padding: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+    .scroll-row{
+      height:50vh;
+      width: 100vw;
+      background-color: blue;
+        display: flex;
+        overflow-x: auto;
+      white-space: nowrap;
+        padding: 20px;
+        scroll-behavior: smooth;
+/*background-color:white;*/
+    }
+
+    .product-card {
+      background-color:white;
+      width: 24%;
+      /*width: 200px;*/
+      flex: 0 0 auto;
+      border-radius: 10px;
+      text-align: center;
+      padding: 10px;
+      margin-right: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+     .product-card:hover{
+            transform: scale(105%);
+        } 
+     .product-card1 {
+      background-color:white;
+      width: 24%;
+      /*width: 200px;*/
+      flex: 0 0 auto;
+      border-radius: 10px;
+      text-align: center;
+      padding: 10px;
+      margin-right: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+     .product-card1:hover{
+            transform: scale(105%);
+        } 
+     .product-card2 {
+      background-color:white;
+      width: 24%;
+      /*width: 200px;*/
+      flex: 0 0 auto;
+      border-radius: 10px;
+      text-align: center;
+      padding: 10px;
+      margin-right: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+     .product-card2:hover{
+            transform: scale(105%);
+        } 
+     .product-card img {
+      width: 30%;
+      height: 70%;
+      object-fit: contain;
+      transition: transform 0,3s ease;
+      align-items: center;
+      background-color: white;
+    }
+    .product-title{
+      font-weight: bold;
+      margin-top: 2px;
+    }
+    .product-offer {
+      color: green;
+      font-size: 14px;
+    }
+    .scroll-row::-webkit-scrollbar{
+        display: none;
+    }
+    
+     
+#maingrid{
+        width: 100vw;
+         height: 80vh;
+        background-color:rgb(208, 183, 231);
+       display:flex;
+       /*margin-left: 0;*/
+    align-items: center;
+    justify-content: space-around;
+     }
+       #grid1{
+        width: 25%;
+        height:70vh;
+        background-color:white;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);/*100px 100px;*/
+         margin-left: 10px;
+        align-items: center;
+        text-align: center;
+        justify-content: space-around;
+    } 
+    #grid2{
+        width: 25%;
+        height:70vh;
+        background-color:white;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);/*100px 100px;*/
+         margin-left: 10px;
+        align-items: center;
+        text-align: center;
+        justify-content: space-around;
+    } 
+    #grid3{
+        width: 25%;
+        height:70vh;
+        background-color:white;
+        display: grid;
+        grid-template-columns:repeat(2,1fr);/* 100px 100px;*/
+         margin-left: 10px;
+        align-items: center;
+        text-align: center;
+        justify-content: space-around;
+    } 
+     #grid4{
+        width: 25%;
+        height:70vh;
+        background-color:white;
+        display: grid;
+        grid-template-columns:repeat(2,1fr);/* 100px 100px;*/
+         margin-left: 10px;
+        align-items: center;
+        text-align: center;
+        justify-content: space-around;
+    } 
+    .gr{
+        text-align: center;
+    }
+    p{
+        font-size: small;
+        font-style:initial;
+    }
+    .title{
+           grid-column: span 2;
+        font-size:x-small;  
+    }
+    footer{
+      background-color: #172337;
+      color:#fff;
+      padding:40px 0;
+    }
+    footer a {
+      color: #bbb;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    footer a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+    footer h5 {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    .footer-bottom {
+      border-top: 1px solid #444;
+      margin-top: 20px;
+      padding-top: 10px;
+      gap: 50px;
+      font-size: 13px;
+      color: #999;
+    }
+
+   
+     /*  .footer {
+      background: #172337;
+      color: white;
+      padding: 20px;
+      text-align: center;
+     }*/
+    /*.product-card img{
+      width: 30%;
+      height: 70%;
+      align-items: center;
+      background-color: white;
+    }
+    .product-tittle1 {
+      font-weight: bold;
+      margin-top: 2px ;
+    } 
+    .product-offer1 {
+      color: green;
+      font-size: 14px;
+    }
+
+     Footer 
+    #footer {
+      background-color: #282c3f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }*/
+  </style>
+  </head>
+<body>
+
+  <!-- Navbar 
+  <div id="navbar">
+    <div id="logo" style="font-style: italic; color:#3072ff">Flipkart</div>
+   <div class="search-box"> 
+       <input placeholder="Search for products, brands and more">
+    </div>
+    <div id="icons">
+    <span>👤Login</span>  
+    <span>🛒Cart</span>
+    <span title="Bestsellers">🏅BestSellers</span>
+      <span class="more-icon">⋮</span>
+      <div id="menu">
+       <a href="#">Login</a>
+      <a href="#">Cart</a>
+      <a href="#">More</a>
+    </div>
+    </div>
+     Categories-->
+
+       <!-- Flipkart Navbar -->
+  <nav class="navbar navbar-expand-lg px-4">
+    <a class="navbar-brand" style="font-style: italic; color:whitesmoke"> Flipkart
+      <small>Explore <span class="text-warning">Plus 🌟</span> <img src="https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/explorePlus-bb7dfc.svg" alt="+" width="10"></small>
+    </a>
+
+    <!-- Search box -->
+    <div class="search-box mx-3">
+      <input type="text" placeholder="Search for products, brands and more">
+      <button>Search</button>
+    </div>
+
+    <!-- Right-side buttons -->
+    <div class="ms-auto nav-btns d-flex align-items-center">
+      <span>👤 Login</span>
+      <span>🛒 Cart</span>
+      <span>🏅 More</span>
+      <span class="more-icon">⋮</span>
+    </div>
+  </nav>
+
+  <div id="categories">
+    <div class="category">
+      <img src="29327f40e9c4d26b.webp"/>
+      <p>Grocery</p>
+    </div>
+    <div class="category">
+      <img src="logomen.jpg"/>
+      <p>Men</p>
+    </div>
+    <div class="category">
+      <img src="logowomens.jpg"/>
+      <p>Women</p>
+    </div>
+     <div class="category">
+      <img src="logokids.jpg"/>
+      <p>Kids</p>
+    </div>
+     <div class="category">
+      <img src="footwear.jpg"/>
+      <p>Footwears</p>
+      </div>
+       <div class="category">
+      <img src="Luggage.SS300_QL85_FMpng.png"/>
+      <p>Luggages&bags</p>
+      </div>
+      <div class="category">
+      <img src="home_files/flight.jpg"/>
+      <p>FligthtBooking</p>
+      </div>
+  </div>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="home_files/banner1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="home_files/banner2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="home_files/banner3.1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="home_files/banner4.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+ 
+<h2><strong> Foods Toys & More...</strong></h2>
+ <div class="scroll-row">
+    <div class="product-card">
+      <img src="home_files/coffee.jpg" width="150" height="150" alt="coffepower">
+<p class ="product-title"><strong>Coffee Power</strong></p>
+<p class ="product-offer">Up to 80% Off</p>
+    </div>
+ <div class="product-card">
+ <img src="home_files/cycle.jpg" width="150" height="150" alt="cycle">
+<p class ="product-title"> <strong>GearedCycle</strong> </p>
+<p class ="product-offer">Up to 70% Off</p>
+  </div>
+  <div class="product-card">
+ <img src="home_files/pen.jpg" width="150" height="150" alt="pens">
+<p class ="product-title"><strong>Stationery</strong></p>
+<p class ="product-offer">From ₹49</p>
+  </div>
+  <div class="product-card">
+ <img src="home_files/batman.jpg" width="150" height="150" alt="batman">
+<p class ="product-title"> <strong>Action Toys</strong></p>
+<p class ="product-offer">Up to 60% Off</p>
+  </div>
+</div>
+
+<h2><strong> Best Electroinc</strong></h2>
+ <div class="scroll-row">
+    <div class="product-card1">
+      <div class="zoom-container">
+      <img src="home_files/airpords.jpg" width="150" height="150" alt="headphones" >
+<p class ="product-title"><strong>Headphones</strong></p>
+<p class ="product-offer">Grab Now</p>
+    </div>
+    </div>
+ <div class="product-card1">
+ <img src="home_files/bluetooth.jpg" width="120" height="120" alt="bluetooth">
+<p class ="product-title"><strong> Speaker </strong></p>
+<p class ="product-offer">From ₹2,399</p>
+  </div>
+  <div class="product-card1">
+ <img src="home_files/watch.jpg" width="150" height="150" alt="Smart watches">
+<p class ="product-title"><strong>Smart Watches</strong></p>
+<p class ="product-offer">From ₹1,399</p>
+  </div>
+  <div class="product-card1">
+ <img src="home_files/printer.jpg" width="150" height="150" alt="printers">
+<p class ="product-title"> <strong>Printers</strong></p>
+<p class ="product-offer">From ₹5,999</p>
+  </div>
+</div>
+
+<h2><strong> Furniture Deals</strong></h2>
+ <div class="scroll-row">
+    <div class="product-card2">
+      <img src="home_files/bed.jpg" width="150" height="150" alt="mattress" >
+<p class ="product-title"><strong>Mattresses</strong></p>
+<p class ="product-offer">From ₹2,990</p>
+    </div>
+ <div class="product-card2">
+ <img src="home_files/sofa.jpg" width="150" height="150" alt="sofa">
+<p class ="product-title"><strong>Sofaa</strong></p>
+<p class ="product-offer">From ₹7,999</p>
+  </div>
+  <div class="product-card2">
+ <img src="home_files/beds.webp" width="150" height="150" alt="beds">
+<p class ="product-title"><strong>Beds</strong></p>
+<p class ="product-offer">From ₹1,999</p>
+  </div>
+  <div class="product-card2">
+ <img src="home_files/tv.jpg" width="150" height="150" alt="printers">
+<p class ="product-title"><strong>Tv Units</strong></p>
+<p class ="product-offer">From ₹2,999</p>
+  </div>
+</div>
+
+<div id="maingrid">
+   <div id="grid1"> 
+        <div class="title"><h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 18px;">Up to 50% offer| Home Appliances</h1></div>
+    <div class="gr"><img src="B08345R1ZW---372x232.SY232_CB667322346.jpg" width="90" height="90"/><p>Refrigerators</p></div>
+    <div class="gr"><img src="Appliances-QC-PC-372x232----B08RDL6H79.SY232_CB667322346.jpg" width="90" height="90"/><p>AirConditioners</p></div>
+    <div class="gr"><img src="Appliances-QC-PC-186x116--B08CPQVLZT.SY232_CB667322346.jpg"width="90" height="90"/><p >Washingmachine</p></div>
+    <div class="gr"><img src="B07G5J5FYP.SY232_CB667322346.jpg"width="120" height="120"/><p>Microwaves</p></div>
+    <div class="see-offers">
+   <a href="#">See all offers</a>
+    </div>
+    </div>
+    <div id="grid2">
+            <div class="title"><h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 18px;">Revamp your home in style</h1></div>
+   <div class="gr"><img src="186x116_Home_furnishings_2.SY116_CB555624324 - Copy.jpg" width="90" height="90"/><p>Cushioncovers & more</p></div>
+   <div class="gr"><img src="71ZFN-0b1WL.SX679.jpg" width="90" height="90"/><p>Figurines & more</p></div>
+   <div class="gr"><img src="372x232_Home_storage_1.SY232_CB555629502.jpg" width="90" height="90"/><p>Home storage</p></div>
+   <div class="gr"><img src="372x232_Home_lighting_2_-Copy._SY232_CB555629502.jpg" width="90" height="90"/><p>Lighting solutions</p></div>
+      <div class="see-offers">
+   <a href="#">Explore all</a>
+   </div>
+</div>
+<div id="grid3">
+        <div class ="title"><h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 18px;">Starting ₹149 | Headphones</h1></div>
+   <div class="gr"><img src="PC_QuadCard_boAt.SY232_CB553870684.jpg" width="115" height="115"/><p>Starting$249|boAt</p></div>
+   <div class="gr"><img src="PC_QuadCard_Boult.SY232_CB553870684.jpg" width="115" height="115"/><p>Starting$349|boult</p></div>
+   <div class="gr"><img src="PC_QuadCard_Noise.SY232_CB553870684.jpg" width="115" height="115"/><p>Starting$649|Noise</p></div>
+   <div class="gr"><img src="PC_QuadCard_Zeb_1.SY232_CB570220221 (1).jpg" width="115" height="115"/><p>Starting$149|Zebronics</p></div>
+   <div class="see-offers">
+   <a href="#">See all offers</a>
+   </div>
+   </div>
+<div id="grid4">
+             <div class="title"><h1 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size: 18px;">Up to 50% off|Baby care & toys</h1></div>
+    <div class="gr">
+        <img src="PC_QC_372x232_Life-Style_4.SY232_CB788857785 (1).jpg" width="300" height="250"/><p style="font-size:x-large;" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Up to 50% off | Baby care & toys</p>
+   </div>
+  </div>
+  </div>
+        <!-- Flipkart Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-sm-6 col-md-3">
+          <h5>ABOUT</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Flipkart Stories</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+          <h5>HELP</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Payments</a></li>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Cancellation & Returns</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Report Infringement</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+          <h5>GROUP COMPANIES</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Myntra</a></li>
+            <li><a href="#">Flipkart Wholesale</a></li>
+            <li><a href="#">Cleartrip</a></li>
+            <li><a href="#">Shopsy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-md-3">
+          <h5>SOCIAL MEDIA</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+
+        </div>
+
+      <div class="row footer-bottom mt-4">
+        <div class="col-12 text-center">
+        <!-- <li><a href="#">✅ Become a Seller</a></li>
+          <li><a herf="#">📢 Advertise</a></li>
+          <li><a href="#">🎁 Gift Card</a></li>
+          <li><a href="#">❓ Help Center</a></li>-->
+          ✅ Become a Seller
+          🎁 Gift Card
+          ❓ Help Center
+          © 2025 Flipkart Clone | All Rights Reserved
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer 
+  <div class="footer">
+    &copy; 2025 Flipkart Clone | Built for demo purpose.
+  </div>  -->     
+  <!-- Footer 
+  <div class="footer">
+    © 2025 Flipkart Clone | Designed for Practice Only
+  </div>-->
+
+</body>
+</html>

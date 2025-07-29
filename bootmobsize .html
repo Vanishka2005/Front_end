@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #navMoblie{
+        width: 100vw;
+        height: 7vh;
+        color: black;
+        background-color:cornflowerblue;
+        /*display: flex;*/
+        display: none;
+        align-items: center;
+        /*justify-content: space-between;*/
+
+    }
+    @media screen and (max-width:600px) {
+        #navMoblie{
+            display: flex;
+            justify-content: space-between;
+        }
+        #nav{
+            display: none !important;
+        }
+    }
+    #nav{
+        width: 100vw;
+        height: 7vh;
+        background-color:beige;     
+         display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #left{
+        height: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #right{
+        height: 20%;
+         width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+</style>
+<body>
+    <div id="navMoblie">
+        <p>Home</p>
+        <p>Bootstrap</p>
+        <p>Search</p>
+    </div>
+     <div id="nav">
+         <div id="left">
+            <p>Home</p>
+            <p>Home</p>
+            <p>Home</p>
+            <p>Home</p>      
+        </div>
+        <input id=search type="search" placeholder="search">
+        <div id="right">
+            <p>Home</p>
+            <p>Home</p>
+            <p>Home</p>
+            <p>Home</p>      
+        </div> 
+
+    </div>
+    
+</body>
+</html>

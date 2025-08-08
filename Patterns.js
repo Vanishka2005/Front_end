@@ -10,22 +10,22 @@ for (let i = 1; i <= rows; i++) {
     result += '\n';
     cols += 2;
 }
-console.log(result);
-//
-let rows1 = 3; // Example number of rows
-let cols1 = 1; // Starting number of columns
+console.log("Pattern 1:\n" + result);
+//Numbers patterns
+let rows1 = 5; 
+let num1 = 1;
 let result1 = '';
 
 for (let i = 1; i <= rows1; i++) {
-    for (let j = 1; j <= cols1; j++) {
-        result1 += j % 2 !== 0 ? '*' : '';
+    for (let j = 1; j <=i; j++) {
+        result1 += num1+ ' ';
     }
     result1 += '\n';
-    cols1 += 2; // Increase column count by 2 for next row
+    num1++; // Increase column count by 2 for next row
 }
 console.log(result1);
-//numbers
-let rows2 = 3; 
+//
+let rows2 = 5; 
 let cols2 = 1;
 let num = 1; 
 let result2 = '';
@@ -39,7 +39,7 @@ for (let i = 1; i <= rows2; i++) {
 }
 console.log(result2);
 //Reverse
-let rows3 = 5;
+let rows3= 5;
 let result3 = '';
 let cols3 = 2 * rows3 - 1; // Start with the widest row (9 stars)
 
@@ -52,12 +52,12 @@ for (let i = 1; i <= rows3; i++) {
 }
 console.log(result3);
 // Right-aligned triangle (increasing stars)
-let rows4 = 5;
+let rows4 = 4;
 let result4 = '';
 let cols4 = 1;
-let spaces = rows4*2-2;
+
 for (let i = 1; i <= rows4; i++) {
-   // let spaces = rows4 - i;  // decreasing spaces
+    let spaces = rows4 - i;  // decreasing spaces
     // Add spaces
     for (let j = 1; j <= spaces; j++) {
         result4 += ' ';

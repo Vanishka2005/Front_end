@@ -2,7 +2,7 @@ let day=7;
 switch(day){
     case 1:
         console.log("Monday");
-        break;
+        break;node
     case 2:
         console.log("Tuesday");
         break;
